@@ -215,3 +215,43 @@ make handwired/avocado:default:avrdude
 ``` windows 版
 make handwired/avocado:windefault:avrdude 
 ```
+
+##  キーのカスタマイズ
+以下のキーの部分を書き換えてください
+
+``` keymap.c
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    /* Base */
+    [_BASE] = LAYOUT(
+        LGUI(KC_TAB),    LGUI(KC_D),      LALT(LSFT(KC_TAB)),  LALT(KC_TAB),
+        KC_ESC,         MO(_FN2),           KC_BTN3,        KC_MOUSEMODE_SCROLL_ON_PRESS,
+        KC_BTN1,    LALT(KC_Y)    ,   MO(_FN),        LALT(KC_A),                    KC_BTN2
+    ),
+    [_FN] = LAYOUT(
+        RGB_HUI,    RGB_HUD,   RGB_VAI,    RGB_VAD,
+        RGB_TOG,    RGB_MODE_FORWARD,    RGB_SAI, RGB_SAD,
+        KC_CPI_UP,  KC_CPI_DOWN,  MO(_FN),  KC_SCROLLSPEED_DOWN,   KC_SCROLLSPEED_UP
+    ),
+    [_FN2] = LAYOUT(
+        LGUI(LSFT(KC_S)),   LGUI(KC_PSCREEN), LCTL(LSFT(KC_TAB)),    LCTL(KC_TAB),
+        KC_SPACE,    KC_NO,    KC_ENTER, LCTL(KC_W),
+        KC_SCROLL_INVERSE,  KC_NO,  KC_NO,  LALT(KC_V),   LALT(KC_LEFT)
+    )
+};
+```
+
+macとWindowsのデフォルトは以下のものです。
+![Mac](images/11.mac.png)
+![Windows](images/11.win.png)
+
+## マウス動作のカスタマイズ
+
+個人的な好みで、スクロールアップをスクロールダウンの５倍早くしています。気に入らない場合は、ファームウェアを調整してください。
+
+![Windows](images/12.mouse.png)
+
+``` keymap.c
+                //コメントアウト部分は戻り１倍
+            //  mouse_report.v = (reverse_scroll_y ? -1 : 1) * sign(cum_y) * (abs(cum_x) + abs(cum_y)) / cur_factor * (sign(cum_y)>0 ? 1 : 1) + (sign(cum_y)==sign(last_v) ? last_v / 2 : 0);
+                mouse_report.v = (reverse_scroll_y ? -1 : 1) * sign(cum_y) * (abs(cum_x) + abs(cum_y)) / cur_factor * (sign(cum_y)>0 ? 5 : 1) + (sign(cum_y)==sign(last_v) ? last_v / 2 : 0);
+```
