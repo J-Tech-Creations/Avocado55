@@ -251,7 +251,7 @@ macとWindowsのデフォルトは以下のものです。
 ![Windows](images/12.mouse.png)
 
 ``` keymap.c
-                //コメントアウト部分は戻り１倍
-            //  mouse_report.v = (reverse_scroll_y ? -1 : 1) * sign(cum_y) * (abs(cum_x) + abs(cum_y)) / cur_factor * (sign(cum_y)>0 ? 1 : 1) + (sign(cum_y)==sign(last_v) ? last_v / 2 : 0);
-                mouse_report.v = (reverse_scroll_y ? -1 : 1) * sign(cum_y) * (abs(cum_x) + abs(cum_y)) / cur_factor * (sign(cum_y)>0 ? 5 : 1) + (sign(cum_y)==sign(last_v) ? last_v / 2 : 0);
+    //コメントアウト部分は戻り１倍
+//  mouse_report.v = (reverse_scroll_y ? -1 : 1) * sign(cum_y) * (abs(cum_x) + abs(cum_y)) / cur_factor * (sign(cum_y)>0 ? 1 : 1) + (sign(cum_y)==sign(last_v) ? last_v / 2 : 0);
+    mouse_report.v = (reverse_scroll_y ? -1 : 1) * sign(cum_y) * (abs(cum_x) + abs(cum_y)) / cur_factor * (sign(cum_y)>0 ? 5 : 1) + (sign(cum_y)==sign(last_v) ? last_v / 2 : 0);
 ```
