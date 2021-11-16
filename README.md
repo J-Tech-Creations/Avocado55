@@ -6,17 +6,16 @@
 - ケース 印刷済みの場合は、
 - フィラメント
 - ボールトランスファーベアリング CY-8H
-https://www.amazon.co.jp/Sndy-10-直径ボール金属搬送軸受ユニットコンベアローラー-CY-8h-ボールベアリング/dp/B07GT5PFNB/ref=sr_1_18?__mk_ja_JP=カタカナ&dchild=1&keywords=CY-8H&qid=1604896592&sr=8-18
+https://www.amazon.co.jp/Sndy-10-直径ボール金属搬送軸受ユニットコンベアローラー-CY-8h-ボールベアリング/dp/B07GT5PFNB
 アメリカだと
-https://www.amazon.com/gp/product/B07BVLWK7Q/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1
+https://www.amazon.com/gp/product/B07BVLWK7Q
 
 
 - キースイッチ Cherry MX 互換サイズ キーの数(13)
 開発者は、Kailh Box Pink Silent が軽量で使いやすかったためこちらを選択
 - 無限の可能性 SuXeN 1キー毎のPCB キーの数 (13)
 - ElectroCookie ミニブレッドボード(10x)
-https://www.amazon.co.jp/dp/B07W6DVT6Z/ref=sspa_dk_detail_1?pd_rd_i=B07W6DVT6Z&pd_rd_w=4rIsA&pf_rd_p=86d545e6-51ff-428d-9903-b93b364247df&pd_rd_wg=cOmmV&pf_rd_r=FSHJGA52HJPMGPZE9JGX&pd_rd_r=f2fe2dad-b4cf-462d-a315-1f1114286842&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzTE1GNzY2VDVaQkhBJmVuY3J5cHRlZElkPUEwNTAwMjMyM1NUUkxNUjRKT1RTSiZlbmNyeXB0ZWRBZElkPUEyM01aSURSTFpCVVFGJndpZGdldE5hbWU9c3BfZGV0YWlsJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ&th=1
-
+https://www.amazon.co.jp/dp/B07W6DVT6Z
 - Promicro USB-Cにしたい場合は、SparkFun Qwiic Pro Micro なども可能 
 https://yushakobo.jp/shop/sparkfun-qwiic-pro-micro-usb-c-atmega32u4/
 - ピンヘッダ (コンスルーなど)
@@ -25,17 +24,18 @@ https://yushakobo.jp/shop/a01mc-00/
 - はんだ
 - はんだ吸い取り線(失敗した時のみ必要)
 - 配線用のケーブル
-https://www.amazon.co.jp/ストライブデー-Striveday™-箱入りシリコンワイヤー-24AWG-CECOMINOD044232/dp/B07CVB66YB/ref=sr_1_13?__mk_ja_JP=カタカナ&dchild=1&keywords=配線%2Bエナメル線%2Bカラー&qid=1604898728&sr=8-13&th=1
+(例)
+https://www.amazon.co.jp/ストライブデー-Striveday™-箱入りシリコンワイヤー-24AWG-CECOMINOD044232/dp/B07CVB66YB
 - ダイオード 1N4148 キーの数 (13)
 https://yushakobo.jp/shop/a0800di-01-100/
 - M2、M3ねじセット
-https://www.amazon.co.jp/Akozon-SS304%E3%82%B9%E3%83%86%E3%83%B3%E3%83%AC%E3%82%B9%E9%8B%BC-M2-M2-5-%E7%9A%BF%E5%B0%8F%E3%81%AD%E3%81%98%E3%83%9C%E3%83%AB%E3%83%88%E3%82%A2%E3%82%BD%E3%83%BC%E3%83%88%E3%82%BB%E3%83%83%E3%83%88/dp/B08C2G18FF/ref=sr_1_7?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&keywords=M2+m3&qid=1637043268&sr=8-7
+(例)
+https://www.amazon.co.jp/Akozon-SS304%E3%82%B9%E3%83%86%E3%83%B3%E3%83%AC%E3%82%B9%E9%8B%BC-M2-M2-5-%E7%9A%BF%E5%B0%8F%E3%81%AD%E3%81%98%E3%83%9C%E3%83%AB%E3%83%88%E3%82%A2%E3%82%BD%E3%83%BC%E3%83%88%E3%82%BB%E3%83%83%E3%83%88/dp/B08C2G18FF
 - インサートナット M2-M3セット（必要に応じて）
-https://www.amazon.co.jp/Atpwonz-%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88%E3%83%8A%E3%83%83%E3%83%88-330%E5%80%8B%E3%82%BB%E3%83%83%E3%83%88M2-M5%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%83%E3%83%88%E3%83%8A%E3%83%83%E3%83%88-%E7%9C%9F%E9%8D%AE%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88/dp/B089YS7KHT/ref=sr_1_26?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&keywords=%E3%83%8A%E3%83%83%E3%83%88+m3&qid=1637043152&sr=8-26
+https://www.amazon.co.jp/Atpwonz-%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88%E3%83%8A%E3%83%83%E3%83%88-330%E5%80%8B%E3%82%BB%E3%83%83%E3%83%88M2-M5%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%83%E3%83%88%E3%83%8A%E3%83%83%E3%83%88-%E7%9C%9F%E9%8D%AE%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88/dp/B089YS7KHT
 - キーキャップ (印刷も可能 キー数13
 - トラックボール用ボール55mm (ケンジントンエキスパートマウス互換 印刷も可能だが、印刷した場合、根気よく複数のやすりで表面がツルツルになるまで研磨する必要がある)
-https://www.amazon.co.jp/ぺリックス-トラックボール-光沢仕上げ-他社55mmトラックボールマウスと互換性あり【正規保証品】-PERIPRO-304/dp/B07DXBMT6Z/ref=sr_1_5?__mk_ja_JP=カタカナ&dchild=1&keywords=ケンジントン+トラックボール+玉&qid=1604899615&sr=8-5
-https://www.amazon.co.jp/UEETEK-紙やすり-耐水ペーパー-27枚入り-1000/dp/B07794Z26J/ref=sr_1_6?__mk_ja_JP=カタカナ&dchild=1&keywords=紙やすり+セット&qid=1604899670&sr=8-6
+https://www.amazon.co.jp/ぺリックス-トラックボール-光沢仕上げ-他社55mmトラックボールマウスと互換性あり【正規保証品】-PERIPRO-304/dp/B07DXBMT6Z
 - PMW3360 PCB付き
 https://www.tindie.com/products/jkicklighter/pmw3360-motion-sensor/?pt=ac_prod_search
 - エポキシ（用途に応じて）
@@ -49,7 +49,7 @@ micro USBのPro Microを使用する場合や、ボールを自作するとき�
 - ニッパー 
 - 精密ドライバー
 - ワイヤーストリッパー
-https://www.amazon.co.jp/アイウィス-IWISS-ワイヤーストリッパー-Φ0-6-2-6mm-20-10AMG/dp/B01GDVWVUG/ref=sr_1_13?__mk_ja_JP=カタカナ&dchild=1&keywords=ワイヤーストリッパー&qid=1604899770&sr=8-13
+https://www.amazon.co.jp/アイウィス-IWISS-ワイヤーストリッパー-Φ0-6-2-6mm-20-10AMG/dp/B01GDVWVUG/
 - ノギス特にボールとセンサーの深さを図るのに便利
 
 ## ソフトウェア環境
