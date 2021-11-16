@@ -118,8 +118,100 @@ https://github.com/swanmatch/colosseum60#ledsk6812mini%E3%81%AE%E5%AE%9F%E8%A3%8
 - 各PCBの + をダイオードの足やエナメル線で結線します。そのうち１本をPromicroに接続できるように、長いエナメル線などで取り出しておきます。この際、固定の１色を使うとわかりやすいです。個人的にはこれには黒を使用しています。
 ![PCB](images/02.onlyplus.jpeg)
 - 各PCBの - をダイオードの足やエナメル線で結線します。そのうち１本をPromicroに接続できるように、長いエナメル線などで取り出しておきます。この際、固定の１色を使うとわかりやすいです。個人的にはこれには赤を使用しています。
+![PCB](images/03.minus.jpeg)
 - 各PCBのデータ線をダイオードの足やエナメル線で結線します。この順番でLEDのアニメーションなどが動くのですが、Avocadoの場合は、円形に接続されれば問題ありません。私は、右上の時計で言う1時の位置のキーからスタートして、時計回りで結線していきます。1時のキーのDIに接続した線を、Promicroに接続できるように取り出しておきます。次のキーに接続する際は、前のキーのDOから出した線を次のキーのDIに接続します。
+![PCB](images/04.data.jpeg)
+- PCBのROW（行）をつなげます。Avocado55では一行目4つ（一番上の行）、二行目4つ（真ん中）、三行目5つでソフトウェアを設定しています。二行目と三行目が画像で見るとわかるように、内側、外側で分かれているのでご注意ください。同じ行同士をつなげて、１本をPromicro接続のために取り出します。
+![PCB](images/05.row.jpeg)
+- PCBのCOL(列)をつなげます。Avocado55では1,2,4,5列が3つづつ、3列目が1つのキーと設定しています。
+![PCB](images/06.col.jpeg)
 
+## ブレッドボードの作成
+ブレッドボードにPromicroをはんだ付けします。コンスルーを用いて、着脱可能にすることも可能です。位置は以下のようにします
+
+|ブレッドボード上の位置|Promicroのピン|
+|---|---|
+|D17|RAW|
+|H17|TX0|
+|D6|9|
+|H6|10|
+
+![PCB](images/07.breadboard1.jpeg)
+![PCB](images/07.breadboard2.jpeg)
+
+Promicro の接続ができたら、リセットスイッチを設定します。GNDとRSTをスイッチの各端子に接続します。
+|ブレッドボード上の位置|配線|
+|---|---|
+|G15|RST G5と接続|
+|G5|RST G15と接続|
+|E15|GND D5と接続|
+|D5|GND E15と接続|
+|F5|スイッチ端子1|
+|E5|スイッチ端子2|
+
+![PCB](images/07.breadboard3.jpeg)
+
+ここまでできたら、ケースにブレッドボードをネジ付します。
+
+# キー配線とブレッドボードの配線
+|ブレッドボード上の位置|配線|
+|---|---|
+|J14|VCC PCBの(+)と接続|
+|J16|GND PCBの(-)と接続|
+|A17|DATA TX0 PCBの1つ目のDIと接続|
+
+![PCB](images/08.connect.jpeg)
+
+|ブレッドボード上の位置|配線|
+|---|---|
+|A8|Promicro7 PCBの一番右(1列目)のCOLと接続|
+|A9|Promicro6 PCBの2列目のCOLと接続|
+|A10|Promicro5 PCBの3列目のCOLと接続|
+|A11|Promicro4 PCBの4列目のCOLと接続|
+|A12|Promicro3 PCBの一番左(5列目)のCOLと接続|
+|I6|Promicro10 PCBの一番上1行目のROWと接続|
+|B6|Promicro10 PCBの2行目のROWと接続|
+|B7|Promicro10 PCBの一番下3行目のROWと接続|
+
+![PCB](images/09.connect.jpeg)
+
+ここまでで、キーとの配線が終了です。ボールのセンサーをつけていませんが、この時点でファームウェアをPromicroにインストールすると、キーの設定が動作します。
+
+
+## センサーの接続
+レンズこみでセンサーをネジではめます。この際に、レンズとケースの底面が2.5-3mmの時に最もトラッキングのパフォーマンスが良くなります。
+センサーの方向は、端子が手前にくる形ではめるようにプログラムされています。
+
+|ブレッドボード上の位置|センサーの配線|
+|---|---|
+|I14|VI  Promicro VCC|
+|J8|MI  Promicro 14|
+|J7|MO Promicro 16|
+|J9|SC  Promicro 15|
+|J10|SS  Promicro A0|
+|A15|GD  Promicro GND|
+
+
+![PCB](images/10.sensor.jpeg)
+
+上記で配線は終了です。お疲れ様でした。
+
+下の蓋をはめて組み立ては完成です。
 
 # ソフトウェア設定
 
+QMK Firmware を使用するのですが、私の作成したリポジトリをQMK 本家にプルリクエストを出していないため、私の作成したリポジトリを使用する必要があります。
+QMKのインストールは、本家と同じですが、以下で私のリポジトリをクローンします。
+
+``` bash or zsh
+git clone https://github.com/tomohisa/qmk_firmware.git
+```
+
+ファームウェアのインストール
+``` mac 版
+make handwired/avocado:default:avrdude 
+```
+
+``` windows 版
+make handwired/avocado:windefault:avrdude 
+```
