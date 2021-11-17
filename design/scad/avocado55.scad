@@ -168,7 +168,6 @@ module bearing (diameter, is_ball = false) {
 if (is_ball) {
   translate([0,0,-diameter/2-4.25]) sphere(r=4,$fn=30);
 }else{
-  bearingVersion = 2;
   depth = (bearingVersion==1) ? -4.25 : -3;
   height = (bearingVersion==1) ? 6.25 : 7.5;
 
