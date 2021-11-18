@@ -197,11 +197,11 @@ Once this is done, screw the breadboard to the case.
 |J16|connected to (-) on GND PCB|
 |A17|DATA TX0 Connected to the first DI of PCB|!
 
-! [PCB](images/08.connect.jpeg)
+![PCB](images/08.connect.jpeg)
 
-|Position on breadboard|Wiring|!
+|Position on breadboard|Wiring|
 |---|---|
-|A8|Promicro7 Connects to the COL on the far right (first row) of the PCB| !
+|A8|Promicro7 Connects to the COL on the far right (first row) of the PCB|
 |A9|Promicro6 Connects to the COL in the second row of the PCB|
 |A9|Connect to the COL of the second row of the Promicro6 PCB| |A10|Connect to the COL of the third row of the Promicro5 PCB|
 |A11|Promicro4 Connects to COL of 4th row on PCB|
