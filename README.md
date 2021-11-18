@@ -13,46 +13,46 @@ Macのログインスクリーンで、マウスが効かない問題が確認�
 - FDM 3Dプリンタ (ケース、キーキャップ、ボールのいずれかを印刷する場合)
 - ケース
 - フィラメント
-- ボールトランスファーベアリング CY-8H
-https://www.amazon.co.jp/Sndy-10-直径ボール金属搬送軸受ユニットコンベアローラー-CY-8h-ボールベアリング/dp/B07GT5PFNB
+- ボールトランスファーベアリング CY-8H<br />
+https://www.amazon.co.jp/Sndy-10-直径ボール金属搬送軸受ユニットコンベアローラー-CY-8h-ボールベアリング/dp/B07GT5PFNB<br />
 アメリカだと
 https://www.amazon.com/gp/product/B07BVLWK7Q
 
 
-- キースイッチ Cherry MX 互換サイズ キーの数(13)
+- キースイッチ Cherry MX 互換サイズ キーの数(13)<br>
 開発者は、Kailh Box Pink Silent が軽量で使いやすかったためこちらを選択
-- 無限の可能性 SuXeN 1キー毎のPCB キーの数 (13)
+- 無限の可能性 SuXeN 1キー毎のPCB キーの数 (13)<br>
+https://swanmatch.booth.pm/items/1940247
 - ElectroCookie ミニブレッドボード(10x)
 https://www.amazon.co.jp/dp/B07W6DVT6Z
-- Promicro USB-Cにしたい場合は、SparkFun Qwiic Pro Micro なども可能 
+- Promicro USB-Cにしたい場合は、SparkFun Qwiic Pro Micro なども可能 <br>
 https://yushakobo.jp/shop/sparkfun-qwiic-pro-micro-usb-c-atmega32u4/
 - ピンヘッダ (コンスルーなど)
 https://yushakobo.jp/shop/a01mc-00/
 - YS-SK6812MINI 足付きLED
 - はんだ
 - はんだ吸い取り線(失敗した時のみ必要)
-- 配線用のケーブル
+- 配線用のケーブル<br />
 (例)
 https://www.amazon.co.jp/ストライブデー-Striveday™-箱入りシリコンワイヤー-24AWG-CECOMINOD044232/dp/B07CVB66YB
-- ダイオード 1N4148 キーの数 (13)
+- ダイオード 1N4148 キーの数 (13)<br />
 https://yushakobo.jp/shop/a0800di-01-100/
-- M2、M3ねじセット、もしくはタップねじセット
+- M2、M3ねじセット、もしくはタップねじセット<br />
 (例)
-https://www.amazon.co.jp/Akozon-SS304%E3%82%B9%E3%83%86%E3%83%B3%E3%83%AC%E3%82%B9%E9%8B%BC-M2-M2-5-%E7%9A%BF%E5%B0%8F%E3%81%AD%E3%81%98%E3%83%9C%E3%83%AB%E3%83%88%E3%82%A2%E3%82%BD%E3%83%BC%E3%83%88%E3%82%BB%E3%83%83%E3%83%88/dp/B08C2G18FF
-
+https://www.amazon.co.jp/Akozon-SS304%E3%82%B9%E3%83%86%E3%83%B3%E3%83%AC%E3%82%B9%E9%8B%BC-M2-M2-5-%E7%9A%BF%E5%B0%8F%E3%81%AD%E3%81%98%E3%83%9C%E3%83%AB%E3%83%88%E3%82%A2%E3%82%BD%E3%83%BC%E3%83%88%E3%82%BB%E3%83%83%E3%83%88/dp/B08C2G18FF<br />
 (例)
 https://www.amazon.co.jp/SEAFRONT-400Pcs%E3%83%96%E3%83%A9%E3%83%83%E3%82%AFM2-M2-6%E3%81%AA%E3%81%B9%E9%A0%AD%E3%82%BF%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%AD%E3%81%98%E3%82%BB%E3%83%83%E3%83%88%E5%93%81%E6%8F%83%E3%81%88%E3%82%AD%E3%83%83%E3%83%88/dp/B07ZZ1C4R4
 
-- インサートナット M2-M3セット（必要に応じて）
+- インサートナット M2-M3セット（必要に応じて）<br />
 https://www.amazon.co.jp/Atpwonz-%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88%E3%83%8A%E3%83%83%E3%83%88-330%E5%80%8B%E3%82%BB%E3%83%83%E3%83%88M2-M5%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%83%E3%83%88%E3%83%8A%E3%83%83%E3%83%88-%E7%9C%9F%E9%8D%AE%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88/dp/B089YS7KHT
-- キーキャップ (印刷も可能 キー数13
+- キーキャップ (印刷も可能 キー数13<br />
 - トラックボール用ボール55mm (ケンジントンエキスパートマウス互換 印刷も可能だが、印刷した場合、根気よく複数のやすりで表面がツルツルになるまで研磨する必要がある)
 https://www.amazon.co.jp/ぺリックス-トラックボール-光沢仕上げ-他社55mmトラックボールマウスと互換性あり【正規保証品】-PERIPRO-304/dp/B07DXBMT6Z
-- PMW3360 PCB付き
+- PMW3360 PCB付き<br />
 https://www.tindie.com/products/jkicklighter/pmw3360-motion-sensor/?pt=ac_prod_search
-- エポキシ（用途に応じて）
+- エポキシ（用途に応じて）<br />
 micro USBのPro Microを使用する場合や、ボールを自作するときに使います。２液混合タイプで、プラスチック対応のものであれば問題ありません。
--  ゴム足（3つ）
+-  ゴム足（3つ）<br />
 直径8mm以内の物
 
 ## 工具など
