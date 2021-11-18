@@ -153,15 +153,15 @@ The Avocado55 uses 13 keys.
 
 - Place the keyswitches in various places and solder the infinite possibilities and the keyswitch legs. Place the keyswitches in the direction of the LEDs in front of you.
 - Connect the + on each PCB with a diode leg or enameled wire. Take out one of them with a long enameled wire so that it can be connected to the Promicro. It is easier to use one fixed color for this. Personally, I use black for this.
-! [PCB](images/02.onlyplus.jpeg)
+![PCB](images/02.onlyplus.jpeg)
 - Connect the - on each PCB with a diode leg or enameled wire. Take out one of them with a long enameled wire or something so that you can connect it to the Promicro. It is easier to use one fixed color for this. Personally, I use red for this.
-! [PCB](images/03.minus.jpeg)
+![PCB](images/03.minus.jpeg)
 - Connect the data lines of each PCB with diode legs and enamel wires. This is the order in which the LED animations, etc. work. In the case of Avocado, it doesn't matter as long as they are connected in a circular fashion. I'll start with the key at 1 o'clock on the clock in the upper right corner and wire in a clockwise direction, taking out the wire connected to the DI of the 1 o'clock key so that it can be connected to the Promicro. When connecting to the next key, connect the wire from the DO of the previous key to the DI of the next key.
-! [PCB](images/04.data.jpeg)
+![PCB](images/04.data.jpeg)
 - Connect the ROWs (lines) of the PCB; in the Avocado55, the software is set up with four in the first line (top line), four in the second line (middle), and five in the third line. Please note that the second and third lines are divided inside and outside as you can see in the image. Connect the same lines together and take one out for the Promicro connection.
-! [PCB](images/05.row.jpeg)
+![PCB](images/05.row.jpeg)
 - Connect the COLs (columns) of the PCB; in Avocado55, columns 1, 2, 4, and 5 are set to three keys each, and the third row is set to one key.
-! [PCB](images/06.col.jpeg)
+![PCB](images/06.col.jpeg)
 
 ## Create the breadboard.
 Solder the Promicro to the breadboard. It can be made detachable using a consule. The position should be as follows
