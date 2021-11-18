@@ -1,5 +1,7 @@
 # Avocado55
 
+[Japanese|日本語](./README.md)
+
 3D design files and production guide for Avocado 55, a self-made trackball. It is released under MIT license, including STL SCAD. Feel free to use them for your own projects. If you have any questions, please contact me on twitter @tomohisa. Or create an issue in this repository.
 
 ![ball1](images/15.completed.jpeg)
@@ -94,15 +96,15 @@ After that, I polished it with a cloth or liquid compound (like Picard) until it
 The key to deciding on a case is the transfer bearing, which requires three CY-8H 8mm ball bearings, all three of which should be exactly the same. As far as I know, some of the lids fold back about 2 mm, and some about 3 mm, so you need to adjust the size of the bearing holes in the case for each.
 
 
-- avocado55bodyBaring1.stl Bearing type 1 with a fold of about 3 mm, such as uxcell brand bearings.
-- avocado55body.stl A bearing type 2 fold of about 2 mm.
+- [avocado55bodyBaring1.stl](./design/stl/avocado55bodyBaring1.stl) Bearing type 1 with a fold of about 3 mm, such as uxcell brand bearings.
+- [avocado55body.stl](./design/stl/avocado55body.stl) A bearing type 2 fold of about 2 mm.
 
 This choice is very important, because due to the different bearing size, the position of the ball may change, which may cause poor tracking or slight misalignment during tracking.
 Therefore, it is recommended to print and test only the ball bearing part before 3D printing the whole thing in order to adjust the bearing and ball.
 
 
-- cupBaseBaring1.stl Bearing type 1 with a fold of about 3 mm, such as uxcell brand bearings.
-- cupBaseBaring2.stl A bearing type 2 fold of about 2 mm.
+- [cupBaseBaring1.stl](./design/stl/cupBaseBaring1.stl) Bearing type 1 with a fold of about 3 mm, such as uxcell brand bearings.
+- [cupBaseBaring2.stl](./design/stl/cupBaseBaring2.stl)  A bearing type 2 fold of about 2 mm.
 
 Print out one of these that you think is close, set the bearing in place, and measure the distance from the sensor hole at the bottom to the ball with a caliper or similar tool when the ball is inserted. The sensor manufacturer recommends that the distance should be about 2.5mm. As far as I can tell from my own testing, I find that I can track without any problems when the distance is between 2 mm and 3.5 mm. The problem here is that if the bearing is buried too deep and the ball hits the top surface underneath without hitting the bearing, the ball will not turn smoothly. Also, if the bearing is not pressed all the way in due to the accuracy of the 3D printing process, the ball may float too far away from the sensor. In this case, remove the bearing once and use a file to remove any dust from the printing process from the bearing part, and then reinsert the bearing. Then, press the bearing in with your finger. Do not use the ball of the trackball to press the bearing into place. The inside of the bearing could break and the bearing would not work properly. That way, you can determine the bearing type before printing the case.
 
