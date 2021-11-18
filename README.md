@@ -1,6 +1,6 @@
 # Avocado55
 
-[English|英語](./README_MD.md)
+[English|英語](./README_EN.md)
 
 自作トラックボール、Avocado 55 の3D設計ファイル及び制作ガイドです。
 STL SCADなどMITライセンスでリリースします。自分用の作成に自由にご使用いただけます。
