@@ -38,7 +38,7 @@ https://www.amazon.com/StrivedayTM-Flexible-Silicone-electronic-electrics/dp/B01
 - Diode 1N4148 (13)
 https://www.amazon.com/100-Pieces-1N4148-Switching-High-Speed/dp/B079KJ91JZ/
 - M2、M3 Screws or Tapping screws (as needed)
-- Brass Nut M2-M3セット（as needed）
+- Brass Nut M2-M3 Kit（as needed）
 - Keycaps as you like. You can print 3d as well 13
 - 55mm Trackball ball  (for Kendington Expert mouse or Perixx)
 - PMW3360 with PCB
