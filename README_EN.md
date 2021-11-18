@@ -10,7 +10,7 @@
 On macOS logon screen, Avocado mouse cursor is not been able to move. Please understand for device like an iMac, Avocado 55 might not be able to use as only mouse deviced.
 
 
-# 必要な材料
+# Needed Material
 - FDM 3D printer (for printing cases, keycaps, or balls)
 - Case
 - Filament
@@ -63,7 +63,7 @@ https://docs.qmk.fm/#/contributing?id=previewing-the-documentation
 Setting up QMK from page above.
 
 
-### 3Dデザイン
+### 3D Design
 - OpenSCAD 
 https://www.openscad.org
 You can adjust 3d design from scad file. You need OpenScad only if you need to modify design.
@@ -148,7 +148,7 @@ The Avocado55 uses 13 keys.
 
 ![PCB](images/01.pcb.jpeg)
 
-## 各キーの配線
+## Key and PCB wiring
 
 
 - Place the keyswitches in various places and solder the infinite possibilities and the keyswitch legs. Place the keyswitches in the direction of the LEDs in front of you.
