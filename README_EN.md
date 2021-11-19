@@ -111,6 +111,7 @@ Print out one of these that you think is close, set the bearing in place, and me
 
 ## Wrist Rest
 - [wristrest.stl](./design/stl/wristrest.stl) You can 3D print this file or you can buy wrist rest. It helps to lift up wrist to easily operate trackball.
+![wristrest](images/14.wristrest.jpeg)
 
 
 ## Prepare the screw holes
