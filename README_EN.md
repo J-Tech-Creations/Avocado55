@@ -108,6 +108,11 @@ Therefore, it is recommended to print and test only the ball bearing part before
 
 Print out one of these that you think is close, set the bearing in place, and measure the distance from the sensor hole at the bottom to the ball with a caliper or similar tool when the ball is inserted. The sensor manufacturer recommends that the distance should be about 2.5mm. As far as I can tell from my own testing, I find that I can track without any problems when the distance is between 2 mm and 3.5 mm. The problem here is that if the bearing is buried too deep and the ball hits the top surface underneath without hitting the bearing, the ball will not turn smoothly. Also, if the bearing is not pressed all the way in due to the accuracy of the 3D printing process, the ball may float too far away from the sensor. In this case, remove the bearing once and use a file to remove any dust from the printing process from the bearing part, and then reinsert the bearing. Then, press the bearing in with your finger. Do not use the ball of the trackball to press the bearing into place. The inside of the bearing could break and the bearing would not work properly. That way, you can determine the bearing type before printing the case.
 
+
+## Wrist Rest
+- [wristrest.stl](./design/stl/wristrest.stl) You can 3D print this file or you can buy wrist rest. It helps to lift up wrist to easily operate trackball.
+
+
 ## Prepare the screw holes
 Heat the insert nut with a soldering iron and push it into the case to make the screw easier to remove. You can also use a tap screw to connect directly to the case without inserting the nut.
 
