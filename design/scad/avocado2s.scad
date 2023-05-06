@@ -38,9 +38,14 @@ module keybody_h_base (roundsize,roundForBody,detail,lift,diameter,miniballshift
       translate([0,0,-100]) cylinder(r=diameter/2, h=100,$fn=detail,center=false);
     }
     lrdistance=35;
-    translate([cos(25) * (lrdistance + 20),sin(25) * (lrdistance + 20), 8]) difference() {
-      sphere(r=diameter/2+7,$fn=detail);
-      translate([0,0,-100]) cylinder(r=diameter/2, h=100,$fn=detail,center=false);
+    translate([cos(18) * (lrdistance + 20),sin(18) * (lrdistance + 20), 18]) difference() {
+      difference(){
+        union(){
+        sphere(r=diameter/2-3,$fn=detail);
+        translate([0,0,-50]) cylinder(r=diameter/2-3, h=100,center=true);
+        }
+        translate([0,0,74]) cylinder(r=diameter/2, h=100,center=true);
+      }
     }
     translate([cos(-30) * lrdistance,sin(-30) * lrdistance, 0]) difference() {
       sphere(r=diameter/2+5,$fn=detail);
@@ -189,9 +194,9 @@ module bearings (diameter, shift=0) {
 }
 
 module cup (diameter, dispBall = false,alsoInside = false,epoxy=false) {
-topLift = diameter==34 ? 2 : 8;
-height = diameter==34 ? 13.1 : 22;
-apeature = (diameter==34 ? 3 : 0)+ (epoxy ? 1 : 0) ;
+topLift = diameter==34 ? 6 : 8;
+height = diameter==34 ? 19 : 22;
+apeature = (diameter==34 ? 0 : 0)+ (epoxy ? 1 : 0) ;
   if (dispBall) {
     color("red") sphere (r=diameter/2, $fn=50);
   }
@@ -204,7 +209,7 @@ color("gray") difference() {
         translate([0,0, topLift]) linear_extrude(50) circle(r=diameter/2 + 10);
         translate([0,0,-diameter/2-10]) difference() { 
           cylinder(h=diameter/2+height, r=diameter/2+10);
-          cylinder(h=diameter/2+height, r1=diameter/2+20,r2=diameter/2+ apeature);
+          cylinder(h=diameter/2+height, r1=diameter/2+16,r2=diameter/2+ apeature);
         }
     } else {
       sphere (r=diameter/2 + 0.5, $fn=100);
@@ -310,13 +315,18 @@ module trackball55s(isBottom=false){
   splitAngle = 50;
   incline = 40;
   miniballshift=55;
+
+  secondBallX = 50;
+  secondBallY = 15;
+  secondballLift = 10;
+
   if (!isBottom){
     difference() {
       translate([0,cupBaseYshift,0]) cupBase(diameter,bottomHight,isBottom,lift=liftAmount,small=true,bearing_shift=90);
        55sKeyHoles(angleStep,angle1,diameter,firstDistance,firstLift,incline,true);
     }
     difference() {
-      translate([50,20,0]) cupBase(34,bottomHight,isBottom,lift=liftAmount+14,small=true,bearing_shift=60);
+      translate([secondBallX,secondBallY,0]) cupBase(34,bottomHight,isBottom,lift=liftAmount+secondballLift,small=true,bearing_shift=40);
        //55sKeyHoles(angleStep,angle1,diameter,firstDistance,firstLift,incline,true);
     }
   }
@@ -359,7 +369,7 @@ module trackball55s(isBottom=false){
           translate([-500,-500,2]) cube([1000,1000,1000]);
           translate([-500,-500,-1002]) cube([1000,1000,1000]);
           translate([0,cupBaseYshift,0]) cupBase(diameter,bottomHight,isBottom,alsoInside=true,small=true);
-          translate([50,20,0]) cupBase(34,bottomHight,isBottom,lift=liftAmount+14,small=true,bearing_shift=60);
+          translate([secondBallX,secondBallY,0]) cupBase(34,bottomHight,isBottom,lift=liftAmount+secondballLift,small=true,bearing_shift=40);
           translate([0,40,5]) rotate([0,0,90]) cylinder(h=100,r=4, center=true);
         }
       translate([0,0,3]) feet(75,0,5,false);
@@ -374,10 +384,10 @@ module trackball55s(isBottom=false){
         55sKeyHoles(angleStep,angle1,diameter,firstDistance,firstLift,incline,true);
         keybody_cut(diameter+10,roundSize,3,bodylift,roundForBody=roundForBody,detail=detail,miniballshift=miniballshift);
         translate([0,cupBaseYshift,0]) cupBase(diameter,bottomHight,isBottom,only_bearing=true,bearing_shift=60);
-        translate([50,20,0]) cupBase(34,bottomHight,isBottom,only_bearing=true,lift=liftAmount+14,small=true,bearing_shift=60);
+        translate([secondBallX,secondBallY,0]) cupBase(34,bottomHight,isBottom,only_bearing=true,lift=liftAmount+secondballLift,small=true,bearing_shift=40);
         translate([0,93,5]) rotate([0,0,90]) translate([0,0,7]) cube([70,15,9],center=true);
         translate([-500,-500,-1000]) cube([1000,1000,1000]);
-        translate([50 ,20]) cylinder(d=38,h=100);
+        translate([secondBallX ,secondBallY]) cylinder(d=38,h=100);
       }
     } else {
 
