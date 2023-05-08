@@ -198,9 +198,9 @@ topLift = diameter==34 ? 6 : 8;
 height = diameter==34 ? 19 : 22;
 apeature = (diameter==34 ? 0 : 0)+ (epoxy ? 1 : 0) ;
   if (dispBall) {
-    color("red") sphere (r=diameter/2, $fn=50);
+    color("orange") sphere (r=diameter/2, $fn=50);
   }
-color("gray") difference() {
+color("white") difference() {
   sphere (r=diameter/2 + 8.5, $fn=50);
   if (!alsoInside) {
     if (true) {
@@ -233,7 +233,7 @@ module cupBase (diameter,bottomHight, isBottom=false, alsoInside = false,column=
       if (!isBottom) {
         difference() {
           union () {
-          cup (diameter,alsoInside=alsoInside,epoxy=epoxy,dispBall=false);
+          cup (diameter,alsoInside=alsoInside,epoxy=epoxy,dispBall=true);
             if (no_bearing) {
               // rotate([65,0,0]) bearing(diameter,true);
               // rotate([65,0,120]) bearing(diameter,true);
@@ -330,7 +330,7 @@ module trackball55s(isBottom=false){
        //55sKeyHoles(angleStep,angle1,diameter,firstDistance,firstLift,incline,true);
     }
   }
-  color("gray") difference() {
+  color("white") difference() {
     union(){
       if (!isBottom) {
         keybody_h(diameter+10,roundSize,3,bodylift,roundForBody=roundForBody,detail=detail,cupBaseYshift=cupBaseYshift,miniballshift=miniballshift);
