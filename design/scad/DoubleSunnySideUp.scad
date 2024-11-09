@@ -30,7 +30,7 @@ module keyswitch_hole_base(){
 module keybody_h_base (roundsize,roundForBody,detail,lift,diameter,miniballshift=110) {
   hull() {
     intersection() {
-      translate([0,0,lift-6]) sphere(r=roundsize, $fn=detail);
+      translate([0,0,lift-10]) sphere(r=roundsize, $fn=detail);
       cylinder(r=roundForBody, h=1000, center=false, $fn=detail);
     }
     translate([0,miniballshift, 0]) difference() {
@@ -38,7 +38,7 @@ module keybody_h_base (roundsize,roundForBody,detail,lift,diameter,miniballshift
       translate([0,0,-100]) cylinder(r=diameter/2, h=100,$fn=detail,center=false);
     }
     lrdistance=35;
-    translate([cos(18) * (lrdistance + 20),sin(18) * (lrdistance + 20), 18]) difference() {
+    translate([cos(18) * (lrdistance + 22),sin(18) * (lrdistance + 22), 13]) difference() {
       difference(){
         union(){
         sphere(r=diameter/2-3,$fn=detail);
@@ -104,13 +104,15 @@ module 55sKeyHole(index, angleStep, baseAngle, diameter, baseDistance, baseLift,
 module 55sKeyHoles(angleStep, baseAngle, diameter, baseDistance, baseLift, baseIncline, hole) {
   for(i=[0:11]) {
     if (i==11 || i==7) {
-      55sKeyHole(i,angleStep,baseAngle,diameter,baseDistance-7,baseLift+5,baseIncline-30,hole);
-      55sKeyHole(i,angleStep,baseAngle,diameter,baseDistance+12,baseLift-3,baseIncline,hole);
+      55sKeyHole(i,angleStep,baseAngle,diameter,baseDistance-7,baseLift+7,baseIncline-30,hole);
+      55sKeyHole(i,angleStep,baseAngle,diameter,baseDistance+12,baseLift-2,baseIncline,hole);
     } else if (i==3 || i == 0 || i == 1 || i == 2 || i == 4){
     } else if (i==0 || i==6){
-      55sKeyHole(i,angleStep,baseAngle,diameter,baseDistance,baseLift,baseIncline-30,hole);
+      55sKeyHole(i,angleStep,baseAngle,diameter,baseDistance + 2,baseLift,baseIncline-30,hole);
     } else if (i==5){
-      55sKeyHole(i,angleStep,baseAngle,diameter,baseDistance+1,baseLift-2,baseIncline,hole);
+      55sKeyHole(i,angleStep,baseAngle,diameter,baseDistance+1,baseLift-7,baseIncline,hole);
+    } else if (i==10 || i ==8){
+      55sKeyHole(i,angleStep,baseAngle,diameter,baseDistance+1,baseLift-1,baseIncline,hole);
     } else {
       55sKeyHole(i,angleStep,baseAngle,diameter,baseDistance,baseLift,baseIncline,hole);
     }
@@ -188,15 +190,17 @@ if (is_ball) {
 }
 
 module bearings (diameter, shift=0) {
-  rotate([65,0,0+shift]) bearing(diameter);
-  rotate([65,0,120+shift]) bearing(diameter);
-  rotate([65,0,240+shift]) bearing(diameter);
+  xrotate = diameter == 34 ? 75 : 65;
+  rotate([xrotate,0,0+shift]) bearing(diameter);
+  rotate([xrotate,0,120+shift]) bearing(diameter);
+  rotate([xrotate,0,240+shift]) bearing(diameter);
 }
 
 module cup (diameter, dispBall = false,alsoInside = false,epoxy=false) {
-topLift = diameter==34 ? 6 : 8;
+topLift = diameter==34 ? 10 : 8;
 height = diameter==34 ? 19 : 22;
-apeature = (diameter==34 ? 0 : 0)+ (epoxy ? 1 : 0) ;
+middleaddr = diameter==34 ? 24 : 16;
+apeature = (diameter==34 ? 1.5 : 0)+ (epoxy ? 1 : 0) ;
   if (dispBall) {
     color("orange") sphere (r=diameter/2, $fn=50);
   }
@@ -208,8 +212,8 @@ color("white") difference() {
         translate([0,0, 0]) linear_extrude(50) circle(r=diameter/2+0.5+ (epoxy ? 1 : 0), $fn=100);
         translate([0,0, topLift]) linear_extrude(50) circle(r=diameter/2 + 10);
         translate([0,0,-diameter/2-10]) difference() { 
-          cylinder(h=diameter/2+height, r=diameter/2+10);
-          cylinder(h=diameter/2+height, r1=diameter/2+16,r2=diameter/2+ apeature);
+          cylinder(h=diameter/2+height+3, r=diameter/2+10);
+          cylinder(h=diameter/2+height, r1=diameter/2+middleaddr,r2=diameter/2+ apeature);
         }
     } else {
       sphere (r=diameter/2 + 0.5, $fn=100);
@@ -233,7 +237,7 @@ module cupBase (diameter,bottomHight, isBottom=false, alsoInside = false,column=
       if (!isBottom) {
         difference() {
           union () {
-          cup (diameter,alsoInside=alsoInside,epoxy=epoxy,dispBall=true);
+          cup (diameter,alsoInside=alsoInside,epoxy=epoxy,dispBall=false);
             if (no_bearing) {
               // rotate([65,0,0]) bearing(diameter,true);
               // rotate([65,0,120]) bearing(diameter,true);
@@ -258,8 +262,8 @@ module cupBase (diameter,bottomHight, isBottom=false, alsoInside = false,column=
         }
       }
       if (diameter==34) {
-        rotate([0,0,330]) leg(diameter,5,lift+8,isBottom,column=column, lift = 0+lift,cylinderHeight = 30);
-        //rotate([0,0,90]) leg(diameter,5,lift+8,isBottom,column=column, lift = 0+lift,cylinderHeight = 30);
+        //rotate([0,0,330]) leg(diameter,6,lift+8,isBottom,column=column, lift = 0+lift,cylinderHeight = 30);
+        rotate([0,0,90]) leg(diameter,6,lift+8,isBottom,column=column, lift = 0+lift,cylinderHeight = 30);
         //rotate([0,0,180]) leg(diameter,5,lift+8,isBottom,column=column, lift = 0+lift,cylinderHeight = 30);
       }
       if (diameter==55) {
@@ -318,15 +322,17 @@ module trackball55s(isBottom=false){
 
   secondBallX = 50;
   secondBallY = 15;
-  secondballLift = 10;
+  secondballLift = 1;
 
+  bearing_shift55 = 90;
+  bearing_shift34 = 50;
   if (!isBottom){
     difference() {
-      translate([0,cupBaseYshift,0]) cupBase(diameter,bottomHight,isBottom,lift=liftAmount,small=true,bearing_shift=90);
+      translate([0,cupBaseYshift,0]) cupBase(diameter,bottomHight,isBottom,lift=liftAmount,small=true,bearing_shift=bearing_shift55);
        55sKeyHoles(angleStep,angle1,diameter,firstDistance,firstLift,incline,true);
     }
     difference() {
-      translate([secondBallX,secondBallY,0]) cupBase(34,bottomHight,isBottom,lift=liftAmount+secondballLift,small=true,bearing_shift=40);
+      translate([secondBallX,secondBallY,0]) cupBase(34,bottomHight,isBottom,lift=liftAmount+secondballLift,small=true,bearing_shift=bearing_shift34);
        //55sKeyHoles(angleStep,angle1,diameter,firstDistance,firstLift,incline,true);
     }
   }
@@ -368,8 +374,8 @@ module trackball55s(isBottom=false){
           
           translate([-500,-500,2]) cube([1000,1000,1000]);
           translate([-500,-500,-1002]) cube([1000,1000,1000]);
-          translate([0,cupBaseYshift,0]) cupBase(diameter,bottomHight,isBottom,alsoInside=true,small=true);
-          translate([secondBallX,secondBallY,0]) cupBase(34,bottomHight,isBottom,lift=liftAmount+secondballLift,small=true,bearing_shift=40);
+          translate([0,cupBaseYshift,0]) cupBase(diameter,bottomHight,isBottom,alsoInside=true,small=true,bearing_shift=bearing_shift55);
+          translate([secondBallX,secondBallY,0]) cupBase(34,bottomHight,isBottom,lift=liftAmount+secondballLift,small=true,bearing_shift=bearing_shift34);
           translate([0,40,5]) rotate([0,0,90]) cylinder(h=100,r=4, center=true);
         }
       translate([0,0,3]) feet(75,0,5,false);
@@ -383,8 +389,8 @@ module trackball55s(isBottom=false){
       union(){
         55sKeyHoles(angleStep,angle1,diameter,firstDistance,firstLift,incline,true);
         keybody_cut(diameter+10,roundSize,3,bodylift,roundForBody=roundForBody,detail=detail,miniballshift=miniballshift);
-        translate([0,cupBaseYshift,0]) cupBase(diameter,bottomHight,isBottom,only_bearing=true,bearing_shift=60);
-        translate([secondBallX,secondBallY,0]) cupBase(34,bottomHight,isBottom,only_bearing=true,lift=liftAmount+secondballLift,small=true,bearing_shift=40);
+        translate([0,cupBaseYshift,0]) cupBase(diameter,bottomHight,isBottom,only_bearing=true,bearing_shift=bearing_shift55);
+        translate([secondBallX,secondBallY,0]) cupBase(34,bottomHight,isBottom,only_bearing=true,lift=liftAmount+secondballLift,small=true,bearing_shift=bearing_shift34);
         translate([0,93,5]) rotate([0,0,90]) translate([0,0,7]) cube([70,15,9],center=true);
         translate([-500,-500,-1000]) cube([1000,1000,1000]);
         translate([secondBallX ,secondBallY]) cylinder(d=38,h=100);
